@@ -1,0 +1,26 @@
+User-agent: *
+
+# --- Bloqueos técnicos de WordPress (sin impacto visual) ---
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/cache/
+Disallow: /cgi-bin/
+Disallow: /xmlrpc.php
+
+# --- Permitir acceso a recursos necesarios (Elementor y media) ---
+Allow: /wp-admin/admin-ajax.php
+Allow: /wp-content/uploads/
+Allow: /wp-content/plugins/elementor/assets/
+Allow: /wp-content/plugins/elementor-pro/assets/
+
+# --- Evitar indexar duplicados y parámetros ---
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*/?replytocom
+
+# --- Evitar paginas sensibles ---
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+
+# --- Sitemap (Yoast / RankMath) ---
+Sitemap: https://feriaempleo.camarazamora.com/sitemap_index.xml
