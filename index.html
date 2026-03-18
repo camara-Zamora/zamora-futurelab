@@ -927,8 +927,130 @@ article.job-type-universitarios{ --stripe: var(--tag-uni,#8B5CF6); }
   }
   .band.logos{ padding-block: 1px; }
 }
+/* director */
+.zfl-governance{
+  position: relative;
+  padding: 96px 24px;
+  background:
+    radial-gradient(circle at top center, rgba(194, 0, 47, 0.08), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f7f8fb 100%);
+  overflow: hidden;
+}
 
+.zfl-governance::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1200px, 92%);
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(194,0,47,.28), transparent);
+}
 
+.zfl-container{
+  width:min(1180px, 100%);
+  margin:0 auto;
+}
+
+.zfl-governance__header{
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.zfl-governance__kicker{
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #C2002F;
+}
+
+.zfl-governance__title{
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: #111827;
+}
+
+.zfl-governance__intro{
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.zfl-governance__grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.zfl-governance__card{
+  background: rgba(255,255,255,.82);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(17,24,39,.08);
+  border-left: 4px solid #C2002F;
+  border-radius: 22px;
+  padding: 30px 28px;
+  box-shadow: 0 14px 40px rgba(17,24,39,.06);
+}
+
+.zfl-governance__card h3{
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+}
+
+.zfl-governance__card p{
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+.zfl-governance__list{
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.zfl-governance__list li{
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid rgba(17,24,39,.06);
+  font-size: .98rem;
+  line-height: 1.55;
+  color: #1f2937;
+}
+
+.zfl-governance__list li span{
+  color: #6b7280;
+}
+
+@media (max-width: 767px){
+  .zfl-governance{
+    padding: 72px 20px;
+  }
+
+  .zfl-governance__grid{
+    grid-template-columns: 1fr;
+  }
+
+  .zfl-governance__card{
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+}
 /* btn subir */
 
 #ast-scroll-top {
@@ -6821,6 +6943,47 @@ margin-bottom:0;
 				</div>
 				</div>
 				</div>
+	<section class="zfl-governance" aria-label="Dirección y comisión técnica">
+  <div class="zfl-container">
+
+    <div class="zfl-governance__header">
+      <p class="zfl-governance__kicker">Estructura de dirección</p>
+      <h2 class="zfl-governance__title">Dirección y Comisión Técnica</h2>
+      <p class="zfl-governance__intro">
+        El espacio cuenta con una dirección académica y una comisión técnica encargada
+        de orientar su desarrollo y funcionamiento.
+      </p>
+    </div>
+
+    <div class="zfl-governance__grid">
+
+      <article class="zfl-governance__card">
+        <h3>Director</h3>
+        <p>
+          Se nombra a <strong>D. Roberto José García Martín</strong>, profesor del
+          Departamento de Ingeniería Mecánica de la Universidad de Salamanca,
+          como director del espacio.
+        </p>
+      </article>
+
+      <article class="zfl-governance__card">
+        <h3>Comisión Técnica</h3>
+        <p>
+          Se nombra la comisión técnica constituida por los siguientes miembros:
+        </p>
+
+        <ul class="zfl-governance__list">
+          <li><strong>D. Roberto José García Martín</strong> <span>(Presidente)</span></li>
+          <li><strong>D. Manuel Rodríguez Martín</strong> <span>(Vocal USAL)</span></li>
+          <li><strong>D. Manuel Pablo Rubio Cavero</strong> <span>(Vocal USAL)</span></li>
+          <li><strong>D. Carlos Javier Prieto Sánchez</strong> <span>(Vocal CCZa)</span></li>
+          <li><strong>D. Francisco Javier Díaz Rincón</strong> <span>(Secretario CCZa)</span></li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>			
 		<div class="elementor-element elementor-element-00c9b4f e-con-full e-flex e-con e-parent" data-id="00c9b4f" data-element_type="container">
 				<div class="elementor-element elementor-element-4c112e9 elementor-widget elementor-widget-html" data-id="4c112e9" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
