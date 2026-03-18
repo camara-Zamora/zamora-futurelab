@@ -1144,6 +1144,108 @@ article.job-type-universitarios{ --stripe: var(--tag-uni,#8B5CF6); }
     font-size:15px;
   }
 }
+
+/* ================================
+   BLOQUE DOCUMENTO / PDF
+   ================================ */
+
+.zfl-docs{
+  position:relative;
+  padding:48px 18px 96px;
+}
+
+.zfl-docs .zfl-container{
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.zfl-docs__card{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:26px 28px;
+  border-radius:18px;
+
+  background: rgba(255,255,255,.86);
+  border:1px solid rgba(15,23,42,.08);
+
+  box-shadow:
+    0 10px 26px rgba(2,6,23,.08),
+    inset 0 1px 0 rgba(255,255,255,.9);
+
+  backdrop-filter: blur(6px);
+}
+
+.zfl-docs__content{
+  max-width:680px;
+}
+
+.zfl-docs__kicker{
+  margin:0 0 6px;
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#64748b;
+}
+
+.zfl-docs__title{
+  margin:0 0 10px;
+  font-size:22px;
+  font-weight:600;
+  color:#0f172a;
+}
+
+.zfl-docs__text{
+  margin:0;
+  font-size:15px;
+  line-height:1.6;
+  color:#475569;
+}
+
+/* botón tipo FutureLab */
+.zfl-docs__cta{
+  white-space:nowrap;
+  padding:12px 18px;
+  border-radius:12px;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+
+  color:#0f172a;
+  background: linear-gradient(
+    90deg,
+    rgba(34,211,238,.15),
+    rgba(168,85,247,.15)
+  );
+
+  border:1px solid rgba(34,211,238,.35);
+
+  transition: all .2s ease;
+}
+
+.zfl-docs__cta:hover{
+  background: linear-gradient(
+    90deg,
+    rgba(34,211,238,.25),
+    rgba(168,85,247,.25)
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(56,189,248,.2);
+}
+
+/* responsive */
+@media (max-width: 768px){
+  .zfl-docs__card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .zfl-docs__cta{
+    width:100%;
+    text-align:center;
+  }
+}
 			
 /* btn subir */
 
@@ -7077,7 +7179,35 @@ margin-bottom:0;
 
     </div>
   </div>
-</section>		
+</section>	
+
+<section class="zfl-docs" aria-label="Normativa de funcionamiento">
+  <div class="zfl-container">
+
+    <div class="zfl-docs__card">
+      
+      <div class="zfl-docs__content">
+        <p class="zfl-docs__kicker">Documento oficial</p>
+        <h3 class="zfl-docs__title">Normativa de funcionamiento del centro</h3>
+        <p class="zfl-docs__text">
+          Consulta el documento completo con las condiciones de uso, acceso y funcionamiento del espacio FutureLab.
+        </p>
+      </div>
+
+      <a 
+        href="https://www.camarazamora.com/wp-content/uploads/Normativa-de-funcionamiento-del-Centro-Futurelab-Zamora.pdf" 
+        target="_blank" 
+        rel="noopener"
+        class="zfl-docs__cta"
+      >
+        Ver normativa (PDF)
+      </a>
+
+    </div>
+
+  </div>
+</section>
+				
 		<div class="elementor-element elementor-element-00c9b4f e-con-full e-flex e-con e-parent" data-id="00c9b4f" data-element_type="container">
 				<div class="elementor-element elementor-element-4c112e9 elementor-widget elementor-widget-html" data-id="4c112e9" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
