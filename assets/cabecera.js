@@ -1,0 +1,3 @@
+'use strict';
+const header=document.querySelector('.zfl-site-header');
+if(header){const toggle=header.querySelector('.zfl-menu-toggle');const menu=header.querySelector('.zfl-site-menu');header.classList.add('zfl-menu-enhanced');const setOpen=open=>{header.classList.toggle('zfl-menu-open',open);toggle.setAttribute('aria-expanded',String(open));};toggle.addEventListener('click',()=>setOpen(toggle.getAttribute('aria-expanded')!=='true'));menu.addEventListener('click',e=>{if(e.target.closest('a'))setOpen(false);});header.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setOpen(false);toggle.focus();}});matchMedia('(max-width:900px)').addEventListener('change',()=>setOpen(false));}

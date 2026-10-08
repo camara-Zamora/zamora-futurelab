@@ -1,0 +1,596 @@
+.zfl-training{
+  position:relative;
+  overflow:hidden;
+  padding:92px 18px 96px;
+  color:#e5e7eb;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(34,211,238,.10), transparent 34%),
+    radial-gradient(circle at 88% 22%, rgba(168,85,247,.10), transparent 34%),
+    linear-gradient(180deg,#0B0E13 0%,#0d1420 72%,#111827 100%);
+}
+
+.zfl-training::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size:46px 46px;
+  mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 90%);
+}
+
+.zfl-training::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-1px;
+  transform:translateX(-50%);
+  width:min(1180px,calc(100% - 36px));
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(34,211,238,.38),rgba(168,85,247,.28),transparent);
+}
+
+.zfl-training .zfl-container{
+  position:relative;
+  z-index:2;
+  max-width:1180px;
+  margin:0 auto;
+}
+
+.zfl-training__header{
+  max-width:800px;
+  margin:0 auto 46px;
+  text-align:center;
+}
+
+.zfl-training__kicker{
+  margin:0 0 12px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:#67e8f9;
+}
+
+.zfl-training__title{
+  margin:0 0 16px;
+  font-family:"Orbitron",system-ui,sans-serif;
+  font-size:clamp(2rem,2.5vw + 1rem,3rem);
+  line-height:1.12;
+  font-weight:600;
+  letter-spacing:.04em;
+  color:#f8fafc;
+}
+
+.zfl-training__intro{
+  max-width:700px;
+  margin:0 auto;
+  font-size:17px;
+  line-height:1.75;
+  color:#aebbcf;
+}
+
+.zfl-training__path{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 54px minmax(0,1fr);
+  align-items:stretch;
+}
+
+.zfl-training__connector{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.zfl-training__connector::before{
+  content:"";
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,rgba(34,211,238,.30),rgba(99,102,241,.58),rgba(168,85,247,.30));
+}
+
+.zfl-training__connector span{
+  position:absolute;
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  border-radius:999px;
+  border:1px solid rgba(103,232,249,.30);
+  background:#0e1725;
+  color:#67e8f9;
+  font-size:14px;
+  box-shadow:0 0 22px rgba(34,211,238,.10);
+}
+
+.zfl-course{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  padding:28px;
+  border-radius:20px;
+  border:1px solid rgba(148,163,184,.16);
+  background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+  box-shadow:0 20px 55px rgba(0,0,0,.24),inset 0 1px 0 rgba(255,255,255,.05);
+  backdrop-filter:blur(8px);
+  transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease;
+}
+
+.zfl-course:hover{
+  transform:translateY(-3px);
+  border-color:rgba(103,232,249,.28);
+  box-shadow:0 26px 64px rgba(0,0,0,.30),0 0 30px rgba(34,211,238,.045);
+}
+
+.zfl-course::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:24px;
+  right:24px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#22d3ee,#6366f1,#a855f7,transparent);
+  opacity:.72;
+}
+
+.zfl-course__head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.zfl-course__badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(34,211,238,.20);
+  background:rgba(34,211,238,.07);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:#67e8f9;
+}
+
+.zfl-course__badge::before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  background:#22d3ee;
+  box-shadow:0 0 10px rgba(34,211,238,.6);
+}
+
+.zfl-course__free{
+  flex:0 0 auto;
+  font-size:11px;
+  font-weight:650;
+  color:#cbd5e1;
+}
+
+.zfl-course__date{
+  display:flex;
+  align-items:flex-end;
+  gap:10px;
+  margin-bottom:15px;
+}
+
+.zfl-course__date strong{
+  font-size:31px;
+  line-height:1;
+  font-weight:650;
+  letter-spacing:-.03em;
+  color:#fff;
+}
+
+.zfl-course__date span{
+  padding-bottom:3px;
+  font-size:11px;
+  line-height:1.2;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#8ea0ba;
+}
+
+.zfl-course__title{
+  margin:0 0 12px;
+  font-size:clamp(1.35rem,1.6vw,1.75rem);
+  line-height:1.24;
+  font-weight:650;
+  color:#f8fafc;
+}
+
+.zfl-course__description{
+  margin:0 0 20px;
+  font-size:14px;
+  line-height:1.72;
+  color:#b9c5d6;
+}
+
+.zfl-course__meta{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-bottom:20px;
+}
+
+.zfl-course__meta div{
+  padding:11px 10px;
+  border-radius:12px;
+  background:rgba(15,23,42,.50);
+  border:1px solid rgba(148,163,184,.10);
+}
+
+.zfl-course__meta strong{
+  display:block;
+  margin-bottom:3px;
+  font-size:12px;
+  font-weight:650;
+  color:#f1f5f9;
+}
+
+.zfl-course__meta span{
+  display:block;
+  font-size:10px;
+  line-height:1.35;
+  color:#8392a8;
+}
+
+.zfl-course__schedule{
+  margin:0 0 20px;
+  padding:14px 15px;
+  border-left:2px solid rgba(34,211,238,.42);
+  background:rgba(2,6,23,.26);
+  border-radius:0 12px 12px 0;
+  font-size:13px;
+  line-height:1.65;
+  color:#c5cfdd;
+}
+
+.zfl-course__schedule strong{
+  color:#f1f5f9;
+}
+
+.zfl-course__learn{
+  list-style:none;
+  padding:0;
+  margin:0 0 24px;
+  display:grid;
+  gap:9px;
+}
+
+.zfl-course__learn li{
+  position:relative;
+  padding-left:18px;
+  font-size:13px;
+  line-height:1.55;
+  color:#cbd5e1;
+}
+
+.zfl-course__learn li::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.62em;
+  width:6px;
+  height:6px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#22d3ee,#a855f7);
+  box-shadow:0 0 8px rgba(34,211,238,.25);
+}
+
+.zfl-course__footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-top:auto;
+  padding-top:19px;
+  border-top:1px solid rgba(148,163,184,.11);
+}
+
+.zfl-course__note{
+  font-size:11px;
+  line-height:1.5;
+  color:#8ea0b7;
+}
+
+.zfl-course__cta{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:10px 15px;
+  border-radius:11px;
+  border:1px solid rgba(34,211,238,.28);
+  background:linear-gradient(90deg,rgba(34,211,238,.11),rgba(99,102,241,.11));
+  color:#eefcff !important;
+  text-decoration:none !important;
+  font-size:12px;
+  font-weight:650;
+  transition:transform .2s ease,border-color .2s ease,background .2s ease;
+}
+
+.zfl-course__cta::after{
+  content:"→";
+  font-size:14px;
+}
+
+.zfl-course__cta:hover{
+  transform:translateX(2px);
+  border-color:rgba(34,211,238,.52);
+  background:linear-gradient(90deg,rgba(34,211,238,.16),rgba(99,102,241,.16));
+}
+
+.zfl-training__next{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:9px 14px;
+  margin-top:26px;
+  padding:15px 18px;
+  border-radius:14px;
+  border:1px solid rgba(148,163,184,.10);
+  background:rgba(255,255,255,.025);
+}
+
+.zfl-training__next-label{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#67e8f9;
+}
+
+.zfl-training__next-item{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:12px;
+  color:#aebbd0;
+}
+
+.zfl-training__next-item::before{
+  content:"";
+  width:5px;
+  height:5px;
+  border-radius:999px;
+  background:#64748b;
+}
+
+@media (max-width:900px){
+  .zfl-training__path{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .zfl-training__connector{
+    height:28px;
+  }
+  .zfl-training__connector::before{
+    width:1px;
+    height:100%;
+    background:linear-gradient(180deg,rgba(34,211,238,.32),rgba(168,85,247,.32));
+  }
+  .zfl-training__connector span{
+    transform:rotate(90deg);
+  }
+}
+
+@media (max-width:640px){
+  .zfl-training{
+    padding:72px 16px 76px;
+  }
+  .zfl-training__header{
+    margin-bottom:32px;
+  }
+  .zfl-training__title{
+    font-size:28px;
+  }
+  .zfl-training__intro{
+    font-size:16px;
+  }
+  .zfl-course{
+    padding:22px 18px;
+    border-radius:17px;
+  }
+  .zfl-course__head{
+    flex-direction:column;
+    gap:9px;
+  }
+  .zfl-course__date strong{
+    font-size:28px;
+  }
+  .zfl-course__meta{
+    grid-template-columns:1fr;
+  }
+  .zfl-course__footer{
+    align-items:stretch;
+    flex-direction:column;
+  }
+  .zfl-course__cta{
+    width:100%;
+  }
+}
+
+
+.zfl-footer {
+  position: relative;
+  background: radial-gradient(circle at 0% 0%, #020617, #020617 55%, #020617 100%);
+  padding: 40px 20px 24px;
+  color: #e5e7eb;
+  overflow: hidden;
+}
+
+/* Línea / glow superior tecnológica */
+.zfl-footer__glow {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(34,211,238,0),
+    #22d3ee,
+    #3b82f6,
+    #a855f7,
+    rgba(168,85,247,0)
+  );
+  opacity: 0.9;
+  filter: blur(0.4px);
+  pointer-events: none;
+}
+
+/* Contenedor interno */
+.zfl-footer__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto 40px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* Columnas */
+.zfl-footer__col {
+  min-width: 0;
+}
+
+/* Marca */
+.zfl-footer__logo {
+  display: inline-block;
+  font-size: 0.9rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #bfdbfe;
+  margin-bottom: 10px;
+}
+
+.zfl-footer__brand .zfl-footer__text {
+  max-width: 360px;
+}
+
+/* Títulos de columna */
+.zfl-footer__title {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+/* Texto base */
+.zfl-footer__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+}
+
+/* Navegación de enlaces */
+.zfl-footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zfl-footer__nav a {
+  font-size: 0.92rem;
+  color: #e5e7eb;
+  text-decoration: none !important;
+  position: relative;
+  padding-bottom: 2px;
+  opacity: 0.9;
+}
+
+.zfl-footer__nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22d3ee, #3b82f6, #a855f7);
+  transition: width 0.22s ease-out;
+}
+
+.zfl-footer__nav a:hover {
+  opacity: 1;
+}
+
+.zfl-footer__nav a:hover::after {
+  width: 100%;
+}
+
+
+/* Franja inferior */
+.zfl-footer__bottom {
+  border-top: 1px solid rgba(30,41,59,0.9);
+  padding-top: 20px;
+  text-align: center;
+}
+
+.zfl-footer__bottom p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+
+
+:root{color-scheme:dark}html{scroll-behavior:smooth}body.zfl-education{margin:0;background:#0b0e13;color:#cbd5e1;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.65}*{box-sizing:border-box}a{color:#67e8f9}button,input,select,textarea{font:inherit}h1,h2,h3{color:#f8fafc}button,a,input,select,textarea,summary{touch-action:manipulation}:focus-visible{outline:3px solid #67e8f9;outline-offset:4px}[hidden]{display:none!important}.zfl-skip{position:fixed;top:-100px;left:16px;z-index:20;background:#0b0e13;padding:12px}.zfl-skip:focus{top:12px}.zfl-education .zfl-container{max-width:1180px;margin:auto}.zfl-education .zfl-nav{border-bottom:1px solid #253042;background:#0b0e13}.zfl-nav__inner{max-width:1180px;padding:16px 24px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:20px}.zfl-brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:650;color:#f8fafc}.zfl-brand img{width:54px;height:54px;object-fit:contain}.zfl-nav__links{display:flex;gap:24px;flex-wrap:wrap}.zfl-nav__links a{text-decoration:none;color:#b9c5d6;font-size:14px}.zfl-nav__links a[aria-current=page]{color:#67e8f9}.zfl-education .zfl-training{padding-top:70px}.zfl-education h1.zfl-training__title{font-size:clamp(2rem,4vw,3.6rem)}.zfl-education .zfl-training__header{max-width:850px}.zfl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.zfl-grid .zfl-course__footer{align-items:stretch;flex-direction:column}.zfl-grid .zfl-course__cta{width:100%}.zfl-section-heading{margin:46px 0 20px;font-size:24px}.zfl-section-copy{max-width:760px;color:#aebbcf}.zfl-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}.zfl-pending{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:22px}.zfl-panel{padding:28px;border:1px solid rgba(148,163,184,.16);border-radius:20px;background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02))}.zfl-panel h2,.zfl-panel h3{margin-top:0}.zfl-breadcrumb{font-size:13px;margin:0 0 26px;color:#8ea0ba}.zfl-breadcrumb a{text-decoration:none}.zfl-detail-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,1fr);gap:32px;align-items:start}.zfl-detail-grid .zfl-course:hover{transform:none}.zfl-detail-main h2{margin-top:34px;font-size:24px}.zfl-detail-main h2:first-child{margin-top:0}.zfl-detail-main li{margin-bottom:10px}.zfl-program details{border-bottom:1px solid #253042;padding:16px 0}.zfl-program summary{cursor:pointer;color:#f1f5f9;font-weight:600}.zfl-program details p{color:#b9c5d6;margin:12px 0 0}.zfl-facts{margin:0}.zfl-facts dt{color:#8ea0ba;font-size:12px;margin-top:18px;text-transform:uppercase;letter-spacing:.08em}.zfl-facts dd{margin:4px 0 0;color:#f1f5f9}.zfl-status{color:#fde68a;font-size:13px}.zfl-registration{margin-top:46px;scroll-margin-top:24px}.zfl-registration .zfl-training__header{text-align:left;margin-left:0;margin-bottom:24px}.zfl-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.zfl-field{display:flex;flex-direction:column;gap:7px;color:#e2e8f0}.zfl-field small{color:#8ea0ba}.zfl-field input,.zfl-field select,.zfl-field textarea{width:100%;border:1px solid #40506a;background:#0b1320;color:#f8fafc;border-radius:11px;padding:13px 14px;min-height:48px}.zfl-field textarea{resize:vertical}.zfl-field input:focus,.zfl-field select:focus,.zfl-field textarea:focus{border-color:#67e8f9}.zfl-form-wide{grid-column:1/-1}.zfl-form-info{margin-top:24px;color:#aebbcf;font-size:14px}.zfl-check{display:flex;gap:12px;align-items:start;margin:18px 0}.zfl-check input{accent-color:#22d3ee;width:20px;height:20px;flex:0 0 20px;margin-top:3px}.zfl-form-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}.zfl-form-actions button{cursor:pointer}.zfl-form-actions button:disabled{opacity:.65;cursor:not-allowed}.zfl-form-message{padding:16px 0;color:#fde68a}.zfl-review{padding-top:24px}.zfl-review dl{display:grid;grid-template-columns:160px 1fr;gap:8px 16px}.zfl-review dt{color:#8ea0ba}.zfl-review dd{margin:0;overflow-wrap:anywhere}.zfl-review button{cursor:pointer}.zfl-education .zfl-footer{padding:46px 24px 24px}.zfl-education .zfl-footer__inner{max-width:1180px;margin:auto}.zfl-education .zfl-footer__glow{pointer-events:none}.zfl-home-courses .zfl-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.zfl-home-courses .zfl-course__meta{grid-template-columns:repeat(2,minmax(0,1fr))}@media(max-width:950px){.zfl-grid,.zfl-home-courses .zfl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.zfl-detail-grid{grid-template-columns:1fr}}@media(max-width:640px){.zfl-nav__inner{padding:14px 16px;align-items:flex-start;flex-direction:column;gap:12px}.zfl-nav__links{gap:18px}.zfl-grid,.zfl-pending,.zfl-home-courses .zfl-grid,.zfl-form-grid{grid-template-columns:1fr}.zfl-panel{padding:22px 18px}.zfl-education .zfl-training{padding-top:40px}.zfl-review dl{grid-template-columns:1fr}.zfl-review dd{margin-bottom:12px}.zfl-brand img{width:42px;height:42px}.zfl-form-actions .zfl-course__cta{width:100%}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+@media(max-width:640px){.zfl-education .zfl-footer__inner{grid-template-columns:1fr;gap:26px}.zfl-education .zfl-footer__brand{grid-column:auto}.zfl-education .zfl-footer__bottom{text-align:left}}
+
+/* Información práctica antes del programa; misma identidad visual. */
+.zfl-detail-grid>.zfl-course{grid-column:2;grid-row:1}.zfl-detail-main{grid-column:1;grid-row:1}.zfl-course__conditions{font-size:13px;color:#b9c5d6;line-height:1.8;margin:0 0 20px}.zfl-course__conditions strong{color:#f1f5f9}.zfl-registration h2{margin-bottom:14px}.zfl-registration [data-registration-status]{display:inline-block;margin:0 0 14px;padding:6px 12px;border:1px solid rgba(253,230,138,.25);border-radius:999px}.zfl-facts dd,.zfl-registration p{overflow-wrap:anywhere}@media(max-width:950px){.zfl-detail-grid>.zfl-course,.zfl-detail-main{grid-column:auto;grid-row:auto}}
+/* Catálogo escalable: resumen para comparar, programa en la ficha. */
+.zfl-catalog .zfl-training__header{max-width:760px;margin-bottom:34px}.zfl-catalog h1.zfl-training__title{font-size:clamp(28px,3.5vw,44px)}.zfl-catalog-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}.zfl-catalog-heading h2{font-size:24px;margin:0}.zfl-catalog-heading a{font-size:13px;text-decoration:none}.zfl-catalog-controls{display:grid;grid-template-columns:2fr 1.3fr 1fr 1fr;gap:14px;padding:20px;border:1px solid #29384b;border-radius:16px;background:rgba(15,23,42,.6)}.zfl-catalog-controls label{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:600;color:#cbd5e1}.zfl-catalog-controls input,.zfl-catalog-controls select{width:100%;min-width:0;min-height:46px;padding:10px 12px;background:#0b1320;color:#f1f5f9;border:1px solid #40506a;border-radius:9px;font-size:14px}.zfl-catalog-controls input::placeholder{color:#94a3b8}.zfl-catalog-results{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:14px 0 20px}.zfl-catalog-results p{font-size:13px;color:#aebbcf;margin:0}.zfl-catalog-results button{background:transparent;border:0;padding:10px 0;min-height:44px;color:#67e8f9;font-size:13px;cursor:pointer}.zfl-catalog-card{padding:24px;gap:0}.zfl-catalog-card__top{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-bottom:18px}.zfl-catalog-state{font-size:12px;color:#fde68a}.zfl-catalog-card .zfl-course__title{font-size:20px;line-height:1.3;letter-spacing:0}.zfl-catalog-card .zfl-course__title a{color:#f8fafc;text-decoration:none}.zfl-catalog-card .zfl-course__title a:hover{color:#67e8f9}.zfl-catalog-card .zfl-course__description{font-size:14px;margin-bottom:18px}.zfl-catalog-facts{display:grid;gap:9px;margin:0 0 20px}.zfl-catalog-facts>div{display:grid;grid-template-columns:64px minmax(0,1fr);gap:8px;font-size:13px}.zfl-catalog-facts dt{color:#8ea0ba}.zfl-catalog-facts dd{margin:0;color:#e2e8f0;overflow-wrap:anywhere}.zfl-catalog-card .zfl-course__footer{gap:12px;padding-top:16px}.zfl-catalog-card .zfl-course__cta{min-height:44px}.zfl-catalog-empty{text-align:center}.zfl-catalog-empty button{cursor:pointer}.zfl-catalog-upcoming{margin-top:42px}.zfl-catalog-upcoming h3{font-size:20px}.zfl-catalog-upcoming p{font-size:14px;color:#b9c5d6}.zfl-catalog-help{margin-top:36px;max-width:850px}.zfl-catalog-help details{padding:16px 0;border-bottom:1px solid #29384b}.zfl-catalog-help summary{cursor:pointer;font-weight:600;color:#e2e8f0;min-height:32px}.zfl-catalog-help details p{color:#aebbcf;font-size:14px;margin:12px 0 0}@media(max-width:1000px){.zfl-catalog-controls{grid-template-columns:1fr 1fr}}@media(max-width:640px){.zfl-catalog-controls{padding:16px;gap:14px;grid-template-columns:1fr 1fr}.zfl-catalog-controls label:first-child{grid-column:1/-1}.zfl-catalog-controls label:last-child{grid-column:1/-1}.zfl-catalog-heading{align-items:flex-start;flex-direction:column;gap:6px}.zfl-catalog-card{padding:22px 18px}.zfl-catalog .zfl-training__header{text-align:left;margin-bottom:28px}.zfl-catalog .zfl-training__intro{margin-left:0}.zfl-catalog-upcoming{margin-top:30px}}@media(max-width:360px){.zfl-catalog-controls{grid-template-columns:1fr}.zfl-catalog-controls label{grid-column:auto!important}}
+/* Espaciado de filtros: controles holgados y sin columnas estrechas. */
+.zfl-catalog-controls{padding:28px;gap:24px;grid-template-columns:minmax(240px,1.6fr) repeat(3,minmax(180px,1fr));margin-top:26px}
+.zfl-catalog-controls label{gap:12px;line-height:1.5;font-weight:500}
+.zfl-catalog-controls input,.zfl-catalog-controls select{min-height:52px;padding:14px 16px;font-size:14px;line-height:1.5;border-radius:11px;font-weight:400}
+.zfl-catalog-controls select{appearance:none;-webkit-appearance:none;padding-right:44px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 17px center;background-size:16px}
+.zfl-catalog-controls :focus-visible{outline:2px solid #67e8f9;outline-offset:4px}
+.zfl-catalog-results{margin:22px 0 26px}
+@media(max-width:1100px){.zfl-catalog-controls{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.zfl-catalog-controls{padding:24px;gap:24px;grid-template-columns:1fr}.zfl-catalog-controls label,.zfl-catalog-controls label:first-child,.zfl-catalog-controls label:last-child{grid-column:auto}.zfl-catalog-controls input,.zfl-catalog-controls select{min-height:54px}.zfl-catalog-heading{gap:12px}.zfl-catalog-card__top{gap:14px;margin-bottom:22px}.zfl-catalog-facts{gap:12px}}
+@media(max-width:360px){.zfl-catalog-controls{padding:20px}}
+/* Escala común de espacio para formación (Senior UI Designer). */
+.zfl-education{--zfl-space-1:8px;--zfl-space-2:12px;--zfl-space-3:16px;--zfl-space-4:24px;--zfl-space-5:32px;--zfl-space-6:48px;--zfl-space-7:64px}
+.zfl-education .zfl-grid,.zfl-education .zfl-pending{gap:var(--zfl-space-4)}
+.zfl-education .zfl-panel,.zfl-education .zfl-catalog-card,.zfl-education .zfl-detail-grid>.zfl-course{padding:var(--zfl-space-5)}
+.zfl-education .zfl-detail-grid{gap:var(--zfl-space-6)}
+.zfl-education .zfl-detail-grid>.zfl-course .zfl-section-heading{margin:var(--zfl-space-4) 0 var(--zfl-space-4);font-size:22px;line-height:1.35}
+.zfl-education .zfl-detail-main h2{margin:var(--zfl-space-6) 0 var(--zfl-space-3);line-height:1.35}
+.zfl-education .zfl-detail-main h2:first-child{margin-top:0}
+.zfl-education .zfl-detail-main p{margin:0 0 var(--zfl-space-3);line-height:1.75}
+.zfl-education .zfl-detail-main ul{padding-left:22px;margin:0 0 var(--zfl-space-4)}
+.zfl-education .zfl-detail-main li{margin-bottom:var(--zfl-space-2);line-height:1.7}
+.zfl-education .zfl-facts dt{margin-top:var(--zfl-space-4);line-height:1.5}
+.zfl-education .zfl-facts dd{margin-top:var(--zfl-space-1);line-height:1.65;font-size:15px}
+.zfl-education .zfl-detail-grid>.zfl-course>.zfl-status{margin:var(--zfl-space-4) 0}
+.zfl-education .zfl-program details,.zfl-education .zfl-catalog-help details{padding:20px 0}
+.zfl-education .zfl-program summary,.zfl-education .zfl-catalog-help summary{line-height:1.65;min-height:44px;align-content:center}
+.zfl-education .zfl-program details p,.zfl-education .zfl-catalog-help details p{margin:var(--zfl-space-3) 0 var(--zfl-space-1);line-height:1.75}
+.zfl-education .zfl-registration{margin-top:var(--zfl-space-6)}
+.zfl-education .zfl-registration p{line-height:1.75;margin:0 0 var(--zfl-space-4)}
+.zfl-education .zfl-registration .zfl-course__cta{margin:var(--zfl-space-1) 0 var(--zfl-space-4);min-height:48px}
+.zfl-education .zfl-catalog-upcoming,.zfl-education .zfl-catalog-help{margin-top:var(--zfl-space-7)}
+.zfl-education .zfl-catalog-upcoming>.zfl-section-heading,.zfl-education .zfl-catalog-help>.zfl-section-heading{margin-top:0}
+.zfl-education .zfl-catalog-card .zfl-course__footer{padding-top:var(--zfl-space-4);gap:var(--zfl-space-3)}
+.zfl-education .zfl-course__note{font-size:12px;line-height:1.6}
+.zfl-education .zfl-footer__inner{gap:var(--zfl-space-6)}
+@media(max-width:700px){.zfl-education .zfl-panel,.zfl-education .zfl-catalog-card,.zfl-education .zfl-detail-grid>.zfl-course{padding:var(--zfl-space-4)}.zfl-education .zfl-detail-grid{gap:var(--zfl-space-5)}.zfl-education .zfl-detail-main h2{margin-top:var(--zfl-space-5)}.zfl-education .zfl-registration,.zfl-education .zfl-catalog-upcoming,.zfl-education .zfl-catalog-help{margin-top:var(--zfl-space-6)}.zfl-education .zfl-footer__inner{gap:var(--zfl-space-5)}}
