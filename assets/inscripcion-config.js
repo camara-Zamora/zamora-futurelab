@@ -7,3 +7,8 @@ window.FUTURELAB_REGISTRATION = {
 };
 
 
+
+window.FUTURELAB_REGISTRATION["Rokoko · Captura de movimiento"] = {url: 'https://docs.google.com/forms/d/e/1FAIpQLSdXCibYupMYDPdk_DRAF7-O8PjaeXXLIcqmdUJVhZJMi8hQVA/viewform', open: true};
+
+window.FUTURELAB_REGISTRATION["SHARE · Escáner láser"] = {url: 'https://docs.google.com/forms/d/e/1FAIpQLScXPPf0I9l3wAqw_MqdKFFyG7Es8EI2P0FRAVB74-lQpK0whQ/viewform', open: true};
+
